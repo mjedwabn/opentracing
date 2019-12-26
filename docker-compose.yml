@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  backend:
+    build: backend
+    image: backend
+    ports:
+      - "0.0.0.0:8082:8080"
+
+  gateway:
+    build: gateway
+    image: gateway
+    ports:
+      - "0.0.0.0:8081:8080"
+
+  client:
+    build: client
+    image: client
+    ports:
+      - "0.0.0.0:8080:8080"
+
+networks:
+  default:
