@@ -9,7 +9,7 @@ Demo application consists of 3 services: backend, gateway and client.
 * Gateway connects to backend service using MicroProfile Rest Client and exposes /gateway/resources/hello endpoint.
 * Client connects to gateway service using JAX-RS Client and exposes /client/resources/hello endpoint.
 
-![sequence diagram](https://raw.githubusercontent.com/mjedwabn/opentracing/master/docs/sequence.puml)
+![sequence diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mjedwabn/opentracing/master/docs/sequence.puml)
 
 Requirements
 ------------
