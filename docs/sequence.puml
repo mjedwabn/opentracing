@@ -1,0 +1,11 @@
+@startuml
+actor user
+
+user -> client
+client -> gateway
+gateway -> backend
+gateway <- backend
+client <- gateway
+user <- client
+
+@enduml
