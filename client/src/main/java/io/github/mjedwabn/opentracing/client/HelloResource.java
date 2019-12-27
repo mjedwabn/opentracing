@@ -16,6 +16,7 @@ public class HelloResource {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response sayHello() {
+		// https://download.eclipse.org/microprofile/microprofile-opentracing-1.3/microprofile-opentracing-spec-1.3.html#_jax_rs_client
 		Client client = ClientTracingRegistrar.configure(ClientBuilder.newBuilder()).build();
 		String content = client
 				.target("http://gateway:8080")

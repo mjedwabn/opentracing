@@ -23,11 +23,22 @@ Demo
     ```
 2. Send requests to client endpoint
     ```
-    curl http://localhost:8080/client/resources/hello
-    curl http://localhost:8080/client/resources/hello
+    $ curl http://localhost:8080/client/resources/hello
+    {"content":"hello"}
+    $ curl http://localhost:8080/client/resources/hello
+    {"content":"hello"}
     ...
     ```
-
-3. See traces in Jaeger UI
+3. See traces in [Jaeger UI](http://localhost:16686/search)
 
     ![jaeger ui](https://raw.githubusercontent.com/mjedwabn/opentracing/master/docs/jaeger_ui.png)
+
+Pitfalls
+-------------
+1. Make sure to define JAEGER_SAMPLER_MANAGER_HOST_PORT environment variable. 
+
+References
+-------------
+* [MicroProfile OpenTracing Spec 1.3](https://download.eclipse.org/microprofile/microprofile-opentracing-1.3/microprofile-opentracing-spec-1.3.pdf)
+* [Getting Started with Jaeger](https://www.jaegertracing.io/docs/1.16/getting-started/)
+* [Jaeger Client Library Features](https://www.jaegertracing.io/docs/1.16/client-features/)
